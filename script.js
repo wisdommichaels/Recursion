@@ -58,6 +58,23 @@ switch (weatherCondition) {
 }
 
 
+// Power Function
+function power(x, n) {
+    // Base case: Any number raised to the power of 0 is 1
+    if (n === 0) {
+        return 1;
+    }
+    // Recursive case: base * base^(exponent-1)
+    return x * power(x, n - 1);
+}
+
+// Example usage:
+// const base = 2;
+// const exponent = 3;
+// console.log(`${base} raised to the power of ${exponent} is: ${power(base, exponent)}`);
+
+
+
 // document.getElementById('leapYearForm').addEventListener('submit', function(event) {
 //     event.preventDefault();
     
