@@ -57,6 +57,23 @@ switch (weatherCondition) {
         break;
 }
 
+// fibonacci function
+function fibonacci(n) {
+    // Base cases
+    if (n === 0) {
+        return 0;
+    }
+    if (n === 1) {
+        return 1;
+    }
+    // Recursive case
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+// Example usage:
+const n = 10;
+console.log(`The ${n}th Fibonacci number is: ${fibonacci(n)}`);
+
 
 // Power Function
 function power(x, n) {
@@ -67,6 +84,34 @@ function power(x, n) {
     // Recursive case: base * base^(exponent-1)
     return x * power(x, n - 1);
 }
+
+
+// palidrome checker 
+function isPalindrome(str) {
+    // Helper function to clean the string
+    function cleanString(s) {
+        return s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    }
+
+    // Recursive function to check palindrome
+    function checkPalindrome(s, start, end) {
+        if (start >= end) {
+            return true;
+        }
+        if (s[start] !== s[end]) {
+            return false;
+        }
+        return checkPalindrome(s, start + 1, end - 1);
+    }
+
+    const cleanedStr = cleanString(str);
+    return checkPalindrome(cleanedStr, 0, cleanedStr.length - 1);
+}
+
+// Example usage:
+const input = "A man, a plan, a canal, Panama";
+console.log(`Is the input a palindrome? ${isPalindrome(input)}`);
+
 
 // Example usage:
 // const base = 2;
