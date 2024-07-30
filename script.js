@@ -1,13 +1,13 @@
-// // Leap Year Checker: Create a function that takes a year as input and determines whether it is a leap year or not. Leap years are divisible by 4, but not by 100 unless they are also divisible by 400. 
-// function isLeapYear(year) {
-//     if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
-//         return true;
-//     }
-//     return false;
-// }
+// Leap Year Checker: Create a function that takes a year as input and determines whether it is a leap year or not. Leap years are divisible by 4, but not by 100 unless they are also divisible by 400. 
+function isLeapYear(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        return true;
+    }
+    return false;
+}
 
-// const Year = 2024;
-// console.log(`${year} is a leap year: ${isLeapYear(year)}`);
+const Year = 2024;
+console.log(`${year} is a leap year: ${isLeapYear(year)}`);
 
 // Ticket Pricing: Write a program that prompts the user to enter their age and then determines the price of a movie ticket based on the following criteria:
 // Children (age <= 12): $10
@@ -120,27 +120,27 @@ console.log(`Is the input a palindrome? ${isPalindrome(input)}`);
 
 
 
-// document.getElementById('leapYearForm').addEventListener('submit', function(event) {
-//     event.preventDefault();
+document.getElementById('leapYearForm').addEventListener('submit', function(event) {
+    event.preventDefault();
     
-//     const year = parseInt(document.getElementById('year').value);
-//     const resultElement = document.getElementById('result');
+    const year = parseInt(document.getElementById('year').value);
+    const resultElement = document.getElementById('result');
     
-//     if (isNaN(year)) {
-//         resultElement.textContent = 'Please enter a valid year.';
-//         return;
-//     }
+    if (isNaN(year)) {
+        resultElement.textContent = 'Please enter a valid year.';
+        return;
+    }
 
-//     if (isLeapYear(year)) {
-//         resultElement.textContent = `${year} is a leap year.`;
-//     } else {
-//         resultElement.textContent = `${year} is not a leap year.`;
-//     }
-// });
+    if (isLeapYear(year)) {
+        resultElement.textContent = `${year} is a leap year.`;
+    } else {
+        resultElement.textContent = `${year} is not a leap year.`;
+    }
+});
 
-// function isLeapYear(year) {
-//     return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
-// }
+function isLeapYear(year) {
+    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+}
 
 
 function addNum(num) {
@@ -149,6 +149,5 @@ function addNum(num) {
         counter+= index;
     }
     return counter;
-    
 }
 console.log(addNum(20))
